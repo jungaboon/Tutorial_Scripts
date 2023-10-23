@@ -72,7 +72,7 @@ func weapon_sway(delta):
 
 func weapon_bob(vel : float, delta):
 	if weapon_holder:
-		if vel > 0:
+		if vel > 0 and is_on_floor():
 			var bob_amount : float = 0.01
 			var bob_freq : float = 0.01
 			weapon_holder.position.y = lerp(weapon_holder.position.y, def_weapon_holder_pos.y + sin(Time.get_ticks_msec() * bob_freq) * bob_amount, 10 * delta)
