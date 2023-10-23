@@ -1,6 +1,8 @@
 extends Node3D
 class_name CameraShake
 
+# NOTE: This script is adapted from Pefeper's script. Watch his video to learn more
+
 # trauma will decrease by this amount every second
 @export var trauma_reduction_rate = 1.0
 var trauma = 0.0
@@ -10,6 +12,7 @@ var trauma = 0.0
 @export var max_z = 5.0
 
 
+# If you're coming from the Pefeper video, SimpleNoise is replaced by FastNoiseLite in Godot 4
 @export var noise: FastNoiseLite
 @export var noise_speed = 50.0
 var time = 0.0
